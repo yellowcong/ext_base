@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//Cookies设定
+	Ext.onReady(function(){
+		//设定对象
+		//添加Cookie数据
+		Ext.util.Cookies.set("username","yellowcong");
+		
+		//获取Cookie
+		var result = Ext.util.Cookies.get("username");
+		//返回的是一个Object 对象
+		console.log(result);
+		//数据类型
+		console.log(Ext.typeOf(result));
+		
+		//删除Cooke
+		Ext.util.Cookies.clear('username');
+		//再次获取
+		//获取Cookie
+		var result = Ext.util.Cookies.get("username");
+		//由于Cookie已经被删除，所以返回的对象为空
+		console.log(result);
+	});
+</script>
+
+
+<title>Cookies</title>
+</head>
+<body>
+	<h1 id="top">Cookies设定</h1>
+</body>
+</html>

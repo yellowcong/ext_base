@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+
+	Ext.onReady(function(){
+		
+		//建立一个方法
+		var show = function(){
+			
+			Ext.MessageBox.alert("Ext.util.DelayedTask","延迟调用方法");
+		}
+		
+		//实例化Task对象
+		var task = new Ext.util.DelayedTask(show);
+		//这个方法的作用和difer类是
+		//过2秒后，显示弹窗
+		task.delay(2000);
+		
+		
+		//通过Ext.Function.defer 来延迟调用
+		Ext.Function.defer(function(){
+//			Ext.MessageBox.alert("Ext.Function.defer","延迟调用方法");
+			console.log("xx");	
+		},2000);
+		
+		
+	});
+</script>
+<title>Format对象</title>
+</head>
+<body>
+	<h1>Format对象</h1>
+</body>
+</html>

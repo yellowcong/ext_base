@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//Css样式
+	Ext.onReady(function(){
+		//样式切换成  css1
+		Ext.util.CSS.swapStyleSheet("css2","css1");
+	});
+</script>
+
+<style id="css1" type="text/css">
+	#top{
+		color:yellow;
+	}
+</style>
+
+<!--这个样式会把数据样式覆盖，所以默认显示是红色 的-->
+<style id="css2" type="text/css">
+	#top{
+		color:pink;
+	}
+</style>
+<title>样似Css</title>
+</head>
+<body>
+	<h1 id="top">Css样式</h1>
+</body>
+</html>

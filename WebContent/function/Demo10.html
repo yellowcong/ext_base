@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		
+		// 声明对象
+		var info = ["yellowcong","20","717350389@qq.com","15335761939"];
+		// 直接 将对象迭代，返回false就会停止
+		
+		//Ext.each这个方法是Ext.Array.each函数的别名
+		 Ext.each(info,function(key){
+		 	console.log(key);
+		 });
+		//获取里面的数据
+//		Ext.Array.each(info,function(info){
+//			console.log(info);
+//		});
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>常用方法</h1>
+</body>
+</html>

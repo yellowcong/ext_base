@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//Css样式
+	Ext.onReady(function(){
+		
+		//样式添加
+		//第一个参数是选择器 可以操作css和 class
+		Ext.util.CSS.updateRule("#top","background","#eee");
+	});
+</script>
+
+<style id="css1" type="text/css">
+	#top{
+		color:red;
+	}
+</style>
+
+<title>样似Css</title>
+</head>
+<body>
+	<h1 id="top">Css样式</h1>
+</body>
+</html>

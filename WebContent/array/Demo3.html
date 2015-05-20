@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 导入css -->
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<!-- 导入脚本 -->
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<!-- 导入自定义脚本 -->
+<script type="text/javascript">
+		//初始化模块
+		Ext.onReady(function(){
+			
+			var users = ["yellowcong","zhang3feng","xiaophai"];
+			
+			//获取符合的数据
+			var myuser = Ext.Array.filter(users,function(user){
+//				Ext.MessageBox.alert("info",user);
+//弹出数据
+				// 当返回了false 数据就停止遍历了
+				if(user == "zhang3feng" || user == "xiaophai"){
+					return true;
+				}
+			});
+			//打印符合条件的数据
+			Ext.MessageBox.alert("Array.filter",myuser)
+		});
+</script>
+</head>
+<body>
+<h1>hello extjs</h1>
+
+</body>
+</html>

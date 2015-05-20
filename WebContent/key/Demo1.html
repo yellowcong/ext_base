@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//获取节点
+		var btn = Ext.get("top");
+		
+	/*	//键盘事件
+		var keysEvent = new Ext.util.KeyNav(top,{
+			'enter':function(){
+			
+				Ext.MessageBox.alert("Ext.util.KeyNav","快捷键，就是NB");
+			}
+		});
+		//设定启用
+		keysEvent.enable();*/
+		
+		//通过KeyMap 完成快捷键绑定
+		var keyEvent = new Ext.util.KeyMap("top",{
+			//设定key
+			key:Ext.EventObject.ENTER,
+			//设定方法
+			fn:function(){
+				Ext.MessageBox.alert("Ext.util.KeyMap","快捷键，就是NB");
+			},
+			//作用域
+			scrope:this,
+		});
+
+	});
+</script>
+<title>Key事件</title>
+</head>
+<body>
+my-element
+	<h1>Key事件</h1>
+	<input type="button" value="xx" id="top"/>
+</body>
+</html>

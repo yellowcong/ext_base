@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	//学习日期对象
+	Ext.onReady(function(){
+		
+		//定义方法
+		var User = function(){
+			this.show = function(){
+				Ext.MessageBox.alert("Ailas","通过别名调用方法");
+			}
+		};
+		
+		//实例化对象
+		var user = new User();
+		
+		//通过alias给对象方法取别名
+		var fn = Ext.Function.alias(user,"show");
+		//通过别名调用方法
+		fn();
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>方法对象</h1>
+</body>
+</html>

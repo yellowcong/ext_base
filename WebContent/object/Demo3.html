@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window的创建</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//通过create方法创建window对象
+		/*var win = Ext.create('Ext.window.Window',{
+			width:400,
+			height:300,
+			title:"win创建"
+		});*/
+		var win = new Ext.window.Window({
+			width:400,
+			height:300,
+			title:"win创建"
+		});
+		
+		//绑定的方法时间
+		Ext.get("show").on("click",function(){
+			//显示窗口
+			win.show();
+		});
+		
+	});
+</script>
+</head>
+<body>
+<h1>学习window</h1>
+<input type="button" value="显示" id="show"/>
+</body>
+</html>

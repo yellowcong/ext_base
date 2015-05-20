@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+
+	Ext.onReady(function(){
+		//定义对象
+		var user = {
+			username :"yellowcong",
+			age:1314,
+			email:"717350389@qq.com",
+			phone:"18635171561"
+		}
+		//获取所有val
+		Ext.Object.each(user,function(key){
+			//获取到  key，然后我们可以通过key 来获取val
+//			alert(u);
+			//我们不能直接通过 user.key的方法来 获取数据
+			var val = user[key];
+			console.log(key+":"+val);
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

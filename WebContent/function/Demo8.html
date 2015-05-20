@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		
+		//通过Define来定义对象
+		
+		Ext.define("User",{
+			name:'yellowcong',
+			age:20,
+			emial:"717350389@qq.com",
+			phone:"15335761939",
+			//这个config中配置的方法，默认会给添加 set和get方法
+			config:{
+				website : 'yellowcong.com',
+			},
+		});
+		
+		var user = Ext.create("User",{});
+		//获取最原始的数据
+		console.log(user.website);
+		
+		//通过属性名称修改
+		user.website = "xxxx";
+		//调用对象的方法
+		console.log(user.website);
+		
+		//通过方法设定数据
+		user.setWebsite("zhang3feng.com");
+		//通过方法调用
+		console.log(user.getWebsite());
+		
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>常用方法</h1>
+</body>
+</html>

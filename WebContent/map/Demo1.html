@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//实例化HashMap
+		var users =new Ext.util.MixedCollection();
+		
+		//添加数据
+		users.add("name","yellowcong");
+		users.add("age","20");
+		users.add("email","717350389@qq.com");
+		users.add("phone","18645171561");
+		
+		
+		users.each(function(key){
+			console.log(key+":"+users.get(key));
+		});
+		
+		//通过key来删除数据
+		users.removeAtKey('phone');
+		console.log(users.getCount());
+		
+		//添加数据
+		users.add("phone","110");
+		console.log(users.getCount());
+		
+		//获取数据
+		console.log(users.get("phone"));
+		//清空所有
+		users.clear();
+		console.log(users.getCount());
+	});
+</script>
+<title>HashMap</title>
+</head>
+<body>
+my-element
+	<h1>HashMap</h1>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//返回当前窗口html
+		var date  = Ext.getDoc();
+		//返回对象
+		//Object { dom: HTMLDocument → Demo1.html, el: Object, id: "ext-document", $cache: Object }
+		console.log(date);
+		//获取dom
+		console.log(date.dom);
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1 id="top">常用方法</h1>
+</body>
+</html>

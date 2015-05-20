@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//json类型的string数据
+		var user = "{name:'yellowcong',age:20,email:'717350389@qq.com',phone:'15335761939'}";
+		//打印数据
+		console.log(user);
+		
+		//将String类型的json数据转化为Object 对象数据
+		var userObj = Ext.decode(user);
+		//看看转换后的对象是什么类型的
+		console.log(typeof userObj);
+		//获取json数据中的name
+		console.log(userObj.name);
+		
+		
+		//通过Ext.encode 将Object 类型 json数据转化为 String
+		var userStr = Ext.encode(userObj);
+		console.log(typeof userStr);
+		console.log(userStr);
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>常用方法</h1>
+</body>
+</html>

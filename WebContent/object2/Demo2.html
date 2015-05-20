@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+
+	Ext.onReady(function(){
+		//定义对象
+		/*Ext.define("User",{
+			username :"yellowcong",
+			age:1314,
+			email:"717350389@qq.com",
+			phone:"18635171561"
+		});*/
+		var user = {
+			username :"yellowcong",
+			age:1314,
+			email:"717350389@qq.com",
+			phone:"18635171561"
+		}
+		var  keys = Ext.Object.getKeys(user);
+		//返回的数据是空的
+		console.log(keys);
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

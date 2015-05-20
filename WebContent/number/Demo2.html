@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	//学习日期对象
+	Ext.onReady(function(){
+		
+		//定义方法
+		//判断1 是否在 1-200之间
+		//如果在就返回
+		//如果大于这个范围 就范围最小 或最大
+		var num = Ext.Number.constrain(100,1,200);
+		
+		Ext.MessageBox.alert("Number.constrain",num);
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>方法对象</h1>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	//学习日期对象
+	Ext.onReady(function(){
+		
+		//替换数据
+		var strDate = "<span>我是yellowcong,今年20岁</span>";
+		
+		//htmlEncode 这个方法用来显示源码
+		var date = Ext.String.htmlEncode(strDate);
+		Ext.MessageBox.alert("String.format",date);
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>方法对象</h1>
+</body>
+</html>

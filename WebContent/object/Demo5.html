@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>继承Window</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.define("myWin",{
+			//继承对象
+			extend:'Ext.window.Window',
+			width:300,
+			height:140,
+			newtitle:'default',
+			//设定数据
+			settitle:function(){
+				this.title = this.newtitle;
+			},
+			//设定初始化方法
+			initComponent:function(){
+				//调用方法
+				this.settitle();
+				//父类的方法
+				this.callParent(arguments);
+			}
+			
+		});
+		
+		//创建window
+		Ext.create('myWin',{
+			//我们覆盖了 这个title 
+			newtitle:'yellowcong',
+		}).show();
+	});
+</script>
+</head>
+<body>
+
+<h1>自定义窗口继承</h1>
+</body>
+</html>

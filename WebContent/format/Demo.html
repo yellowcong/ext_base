@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//定义规则
+	Ext.Date.patterns = {
+	    ISO8601Long:"Y-m-d H:i:s",
+	    ISO8601Short:"Y-m-d",
+	    ShortDate: "n/j/Y",
+	    LongDate: "l, F d, Y",
+	    FullDateTime: "l, F d, Y g:i:s A",
+	    MonthDay: "F d",
+	    ShortTime: "g:i A",
+	    LongTime: "g:i:s A",
+	    SortableDateTime: "Y-m-d\\TH:i:s",
+	    UniversalSortableDateTime: "Y-m-d H:i:sO",
+	    YearMonth: "F, Y"
+	};
+	
+	//学习日期对象
+	Ext.onReady(function(){
+		var date= new Date();
+		//格式修改
+		//这个是日期中的Format方法
+//		date = Ext.Date.format(date, Ext.Date.patterns.ISO8601Short);
+		//通过Util中的format，感觉就是一个方法的别名
+		date = Ext.util.Format.date(date, Ext.Date.patterns.ISO8601Short);
+		console.log(date);
+		
+		//去掉html标签
+		var str = Ext.util.Format.stripTags("<h1>xxx</h1>");
+		console.log(str);
+		
+		//round方法，还没有使用明白
+		var date_rount = Ext.util.Format.round(2,20);
+		console.log(date_rount);
+		
+		//去掉空格
+		var str = "    yellowcong";
+		console.log(Ext.util.Format.trim(str));
+		
+		//编码成 源代码
+		str =Ext.util.Format.htmlEncode("<h1>yellocong</h1>");
+		console.log(str);
+		
+		
+		//html解码
+		str =Ext.util.Format.htmlDecode("<h1>yellocong</h1>");
+		console.log(str);
+
+	});
+</script>
+<title>Format对象</title>
+</head>
+<body>
+	<h1>Format对象</h1>
+</body>
+</html>

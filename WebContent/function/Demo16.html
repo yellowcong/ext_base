@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		
+		//通过Query方法查询数据
+		var result = Ext.query("h1");
+		//返回一个数组元素Array [ <h1#top> ]
+		console.log(result);
+		//通过id获取数据
+		result =Ext.query("#top");
+		console.log(result);
+		
+		//通过css样式查询
+		result =Ext.query(".top");
+		console.log(result);
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1 id="top" class="top">常用方法</h1>
+</body>
+</html>

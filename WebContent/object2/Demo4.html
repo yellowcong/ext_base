@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+
+	Ext.onReady(function(){
+		//定义对象
+		var user = {
+			username :"yellowcong",
+			age:1314,
+			email:"717350389@qq.com",
+			phone:"18635171561"
+		}
+		//获取所有val
+		var  val = Ext.Object.getValues(user);
+		console.log(val);
+		Ext.MessageBox.alert("Object.getValues",val);
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

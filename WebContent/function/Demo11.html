@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		
+		//Ext.fly方法来获取数据
+		//通过Id　获取元素
+		var result = Ext.fly("top");
+		//获取数据
+		//Object { dom: <h1#top>, el: Object, $cache: undefined }
+		console.log(result);
+		//返回这个对象的dom ,返回的是str数据
+		console.log(result.dom);
+		
+		//通过get方法来获取元素
+		var res = Ext.get("top");
+		//这个对象中包含了id
+		//Object { el: Object, dom: <h1#top>, id: "top", $cache: Object }
+		console.log(res);
+		
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1 id="top">常用方法</h1>
+</body>
+</html>

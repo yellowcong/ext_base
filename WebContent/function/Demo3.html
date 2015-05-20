@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	//学习日期对象
+	Ext.onReady(function(){
+		
+		//定义方法
+		console.log("开始调用");
+		Ext.Function.defer(function(){
+			Ext.MessageBox.alert("differ","方法延迟调用学习");
+		},2000);
+	});
+</script>
+<title>方法对象</title>
+</head>
+<body>
+	<h1>方法对象</h1>
+</body>
+</html>

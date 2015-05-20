@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+
+	Ext.onReady(function(){
+		
+		//title
+		//需要和我们的ID绑定
+		var text =new  Ext.util.TextMetrics("title");
+		
+		//getHeight( text ) : Number
+		var height = text.getHeight("title");
+		//获取文本的高度
+		console.log(height);
+		
+	});
+</script>
+<title>Format对象</title>
+</head>
+<body>
+	<h1 id="title">Format对象</h1>
+	<input type="button" value="事件" id="btn"/>
+</body>
+</html>

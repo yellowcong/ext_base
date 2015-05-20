@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//Css样式
+	Ext.onReady(function(){
+		//删除样式
+		//通过Id 来删除样式
+		Ext.util.CSS.removeStyleSheet("my_css");
+	});
+</script>
+
+<style id="my_css" type="text/css">
+	#top{
+		color:yellow;
+	}
+</style>
+<title>样似Css</title>
+</head>
+<body>
+	<h1 id="top">Css样式</h1>
+</body>
+</html>

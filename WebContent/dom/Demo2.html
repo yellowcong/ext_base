@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		Ext.get("show").on("click",function(){
+		
+			Ext.MessageBox.alert("Ext.get","Ext.get数据显示");
+		});		
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="显示" id="show"/>
+</body>
+</html>

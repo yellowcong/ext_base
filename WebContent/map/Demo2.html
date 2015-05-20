@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//实例化HashMap
+		var users =new Ext.util.HashMap();
+		
+		//添加数据
+		users.add("name","yellowcong");
+		users.add("age","20");
+		users.add("email","717350389@qq.com");
+		users.add("phone","18645171561");
+		
+		//获取所有的key
+		var keys = users.getKeys();
+		console.log(keys);
+		
+		//获取所有的vals
+		var vals = users.getValues();
+		console.log(vals);
+		
+		//获取一个数据
+		var name = users.get("name");
+		console.log(name);
+
+		//数据 迭代
+		//通过这个方法，返回的都是key
+		users.each(function(key){
+			console.log(key+"__"+users.get(key));
+		});
+		
+		
+		//获取大小
+		//getCount( ) : Number
+		var count = users.getCount();
+		console.log(count);
+		
+		//删除数据
+		users.removeAtKey("phone");
+		console.log(users.getKeys());
+		
+		//添加数据
+		users.add("phone","110");
+		console.log(users.getKeys());
+		
+//		containsKey( key ) : Boolean
+		//查看数据是否存在
+		var flag = users.containsKey("phone");
+		console.log(flag);
+	});
+</script>
+<title>HashMap</title>
+</head>
+<body>
+my-element
+	<h1>HashMap</h1>
+</body>
+</html>

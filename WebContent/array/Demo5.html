@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 导入css -->
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<!-- 导入脚本 -->
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<!-- 导入自定义脚本 -->
+<script type="text/javascript">
+		//初始化模块
+		Ext.onReady(function(){
+			
+			var users = ["yellowcong","zhang3feng","xiaophai"];
+			
+			//获取符合的数据
+			var number = Ext.Array.indexOf(users,"yellowcong");
+			console.log(number);
+			//打印符合条件的数据
+			//返回 -1表示没有找到
+			//当数字 是 0和1的时候，不能直接打印，需要转化 成字符串数据
+			Ext.MessageBox.alert("Array.indexOf",number+"")
+		});
+</script>
+</head>
+<body>
+<h1>hello extjs</h1>
+
+</body>
+</html>

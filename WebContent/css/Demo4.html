@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//Css样式
+	Ext.onReady(function(){
+		//获取CSS 样式
+		//获取所有css
+		var result = Ext.util.CSS.getRules(true);
+		console.log(result);
+		//获取result对象中的 style
+		//查看对象
+		console.log(Ext.typeOf(result))
+	});
+</script>
+
+<style type="text/css">
+	#top{
+		color:yellow;
+	}
+</style>
+<title>样似Css</title>
+</head>
+<body>
+	<h1 id="top">Css样式</h1>
+</body>
+</html>

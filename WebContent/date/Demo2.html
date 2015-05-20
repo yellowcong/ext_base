@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+	//定义规则
+	Ext.Date.patterns = {
+	    ISO8601Long:"Y-m-d H:i:s",
+	    ISO8601Short:"Y-m-d",
+	    ShortDate: "n/j/Y",
+	    LongDate: "l, F d, Y",
+	    FullDateTime: "l, F d, Y g:i:s A",
+	    MonthDay: "F d",
+	    ShortTime: "g:i A",
+	    LongTime: "g:i:s A",
+	    SortableDateTime: "Y-m-d\\TH:i:s",
+	    UniversalSortableDateTime: "Y-m-d H:i:sO",
+	    YearMonth: "F, Y"
+	};
+	
+	//学习日期对象
+	Ext.onReady(function(){
+		//1314好日子啊
+		var dateStr = "2013-01-04";	
+		var type = typeof dateStr;
+		console.log("转化前\t"+type);
+		var date = Ext.Date.parse(dateStr,Ext.Date.patterns.ISO8601Short);
+		type = typeof date;
+		console.log("转化后\t"+type);
+		Ext.MessageBox.alert("Date.parse",date);
+	});
+</script>
+<title>日期对象</title>
+</head>
+<body>
+	<h1>日期对象</h1>
+</body>
+</html>

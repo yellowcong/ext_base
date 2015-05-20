@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link style="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+
+<script type="text/javascript">
+
+	Ext.onReady(function(){
+		
+		//多次点击事件
+		//Ext.util.ClickRepeater
+		
+		var el = Ext.get(btn);
+		
+		//实例化Ext.util.ClickRepeater 对象
+		var event = new Ext.util.ClickRepeater(el,{
+			interval:3000,//发生点击后，再次点击的时间间隔
+			delay:2000,//首次重复的时间间隔
+			stopDefault:true,
+			//设定绑定的方法
+			handler:function(){
+				Ext.MessageBox.alert("Ext.util.ClickRepeater","时间重复");
+			}
+		});
+	});
+</script>
+<title>Format对象</title>
+</head>
+<body>
+	<h1>Format对象</h1>
+	<input type="button" value="事件" id="btn"/>
+</body>
+</html>

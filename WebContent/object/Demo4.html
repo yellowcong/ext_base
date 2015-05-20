@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window的创建</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+	
+	Ext.onReady(function(){
+		//定义User 对象中的 getName
+		var User ={
+			getName:function(){
+				return "yellowcong";
+			}	
+		} 
+		
+		//给对象中定义别名
+		var fn = Ext.Function.alias(User,'getName');
+		//调用别名方法
+		alert(fn());
+		//原始方法调用
+		alert(User.getName());
+	});
+</script>
+</head>
+<body>
+<h1>学习Function.alias，给方法命名别名</h1>
+</body>
+</html>

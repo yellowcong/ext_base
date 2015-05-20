@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>继承Window</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+	//配置
+	/*  Ext.Loader.setConfig({
+		//设定可行
+		enabled:true,
+		//配置路径,设定为当前目录
+		paths:{
+			myApp:'/ux.mywin'
+		}
+	}); 
+	 */
+	//通过require来导入js
+	Ext.require('ux.mywin');
+	
+	//导入
+	Ext.onReady(function(){
+		
+		//绑定方法
+		//点击按钮 就会加载js文件，这样就大大的加快的了软件的运行速度
+		Ext.get("show").on("click",function(){
+			//创建window
+			//将字符传拼接起来，获取到 xx/mywin 文件
+			//其中我们的主键名称和js文件名称需要一致
+			var mywin = Ext.create('ux.mywin',{
+				//我们覆盖了 这个title 
+				newtitle:'yellowcong',
+			}).show();
+			
+			//获取某个属性的数据
+			//这个就是参数 的set和get方法
+			alert(mywin.getNewtitle());
+		});
+	});
+</script>
+</head>
+<body>
+
+<h1>自定义窗口继承</h1>
+<input type="button" value="显示" id="show"/>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>对象定义</title>
+<link type="text/css" rel="stylesheet" href="../resources/js/extjs4.1/resources/css/ext-all.css"/>
+<script type="text/javascript" src="../resources/js/extjs4.1/bootstrap.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+//		Ext.MessageBox.alert("show","xx");
+		
+		//原始方法定义对象
+		var User = function(username){
+			//对于对象，都是通过 this.xx来定义的
+			this.username = username;
+			this.getName = function(){
+				return this.username;
+			}
+		}
+		
+		//实例化对象
+		var user = new User("yellowcong");
+		//调用对象中的方法
+		Ext.MessageBox.alert("用户名",user.getName());
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
